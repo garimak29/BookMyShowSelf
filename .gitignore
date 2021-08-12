@@ -1,0 +1,6 @@
+#java build stuff
+target/
+
+#idea IDE stuff
+*.iml
+.idea/
