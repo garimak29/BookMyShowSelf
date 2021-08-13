@@ -1,2 +1,9 @@
-package com.BookMyShow.app.usecases;public class UserUserCases {
+package com.BookMyShow.app.usecases;
+
+import com.BookMyShow.app.models.Booking;
+
+public class UserUserCases {
+    public Booking makeBooking(){
+
+    }
 }

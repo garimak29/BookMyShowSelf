@@ -1,7 +1,7 @@
-package com.BookMyShow.app.exceptions;
+package com.BookMyShow.app.exceptions.validations;
 
-public class UsernameLengthException extends Throwable {
+public class UsernameLengthException extends ValidationException {
     public UsernameLengthException(String message) {
-        return new BookMyShowException(message);
+        super(message);
     }
 }

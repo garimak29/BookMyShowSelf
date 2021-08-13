@@ -1,4 +1,4 @@
-package com.BookMyShow.app.repositories;
+package com.BookMyShow.app.repositories.interfaces;
 
 import com.BookMyShow.app.models.User;
 
