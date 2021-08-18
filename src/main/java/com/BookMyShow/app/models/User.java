@@ -4,6 +4,7 @@ import com.BookMyShow.app.exceptions.validations.PasswordLengthException;
 import com.BookMyShow.app.exceptions.validations.UsernameLengthException;
 import com.BookMyShow.app.models.services.utils.passwordEncoder.PasswordEncoder;
 import com.BookMyShow.app.models.services.utils.passwordEncoder.PlainTextPasswordEncoder;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
@@ -12,7 +13,7 @@ import java.util.Set;
 
 @Getter
 @Setter
-@Builder
+@AllArgsConstructor
 public class User extends Audit{
     //Authentication
     String username;
@@ -21,6 +22,13 @@ public class User extends Audit{
     //Authorization
     private Set<Role> role;
 
+    public User(String username) {
+        this.username = username;
+    }
+
+    public  void addRole(Role customerRole){
+        this.role.add(customerRole);
+    }
     //Validation
     public void setUsername(String username){
         if(username.length() < 3){

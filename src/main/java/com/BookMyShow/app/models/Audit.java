@@ -10,7 +10,7 @@ import java.util.Objects;
 
 @Getter
 @Setter
-@Builder
+
 public abstract class Audit {
     private Long Id;
     private Date createdOn;
@@ -28,4 +28,6 @@ public abstract class Audit {
     public int hashCode() {
         return Objects.hash(Id);
     }
+
+
 }

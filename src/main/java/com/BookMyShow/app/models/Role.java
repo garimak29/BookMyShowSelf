@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.util.Date;
-
+/*no need to expose this to the customer so not extending Exposed*/
 @Getter
 @Setter
 @Builder

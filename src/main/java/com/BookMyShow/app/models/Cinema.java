@@ -7,7 +7,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Builder
-public class Cinema extends Audit {
+public class Cinema extends Exposed {
     private String name;
     private String address;
 }

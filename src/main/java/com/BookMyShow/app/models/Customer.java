@@ -1,19 +1,20 @@
 package com.BookMyShow.app.models;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
 @Setter
-@Builder
-public class CustomerProfile extends Audit{
+@AllArgsConstructor
+public class Customer extends Exposed{
     String fullName;
     String city;
     String phone;
     String email;
-
+    @NonNull
     private User user;
 
 
+    public Customer(User user) {
+       this.user = user;
+    }
 }

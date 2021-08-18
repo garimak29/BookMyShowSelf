@@ -1,17 +1,20 @@
 package com.BookMyShow.app.models;
 
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.util.List;
 
-@Builder
+
 @Getter
 @Setter
-public class Booking extends Audit {
+@AllArgsConstructor
+public class Booking extends Exposed {
     private User user;
     private Show show;
+    private BookingStatus status;
     List<ShowSeat> seatsBooked;
 }

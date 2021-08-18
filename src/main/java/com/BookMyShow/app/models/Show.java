@@ -10,9 +10,14 @@ import java.util.Date;
 @Getter
 @Setter
 @Builder
-public class Show extends Audit {
+public class Show extends Exposed {
     private Date startTime; // include Timezone
     private Date endTime;
     private Movie movie;
     private Hall hall;
+    private boolean isCancelled;
+
+    public boolean isShowPending(){
+        return !isCancelled && endTime.after(new Date());
+    }
 }

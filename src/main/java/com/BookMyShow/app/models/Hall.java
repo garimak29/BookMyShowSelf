@@ -7,7 +7,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Builder
-public class Hall extends Audit{
+public class Hall extends Exposed{
     private Cinema cinema;
     private String hallNumber;
     private Integer seatCount;

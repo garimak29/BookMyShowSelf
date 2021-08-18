@@ -7,7 +7,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Builder
-public class AdminProfile extends Audit{
+public class Admin extends Exposed{
     private String designation;
     private String phone1, phone2, phone3;
     private Long numberOfYearsInTheCompany;
